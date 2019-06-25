@@ -7,7 +7,7 @@ const server = http.createServer((request, response) => {
     r = 'and the data is: ';
     const fs = require('fs');
 
-    fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+    fs.readFile('/home/data.dt', {encoding: 'utf-8'}, function(err,data){
         if (!err) {
             r += data
         } else {

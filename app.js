@@ -1,12 +1,12 @@
-import express from "express";
-import path from "path";
-import favicon from "serve-favicon";
-import logger from "morgan";
-import cookieParser from "cookie-parser";
-import bodyParser from "body-parser";
-import routes from "./routes/index";
-import users from "./routes/users";
-import * as admin from 'firebase-admin';
+const express = require("express");
+const path = require("path");
+const favicon = require("serve-favicon");
+const logger = require( "morgan");
+const cookieParser = require( "cookie-parser");
+const bodyParser = require( "body-parser");
+const routes = require( "./routes/index");
+const users = require( "./routes/users");
+const admin = require('firebase-admin');
 
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
@@ -16,7 +16,7 @@ admin.initializeApp({
 const defaultDatabase = admin.database();
 console.log('default database is: ' + defaultDatabase);
 
-const app = express();
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

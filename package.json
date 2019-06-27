@@ -10,9 +10,12 @@
     "cookie-parser": "^1.4.4",
     "debug": "^4.1.1",
     "express": "^4.17.1",
+    "firebase-admin": "^8.2.0",
     "jade": "*",
     "morgan": "^1.9.1",
     "serve-favicon": "^2.5.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/express": "^4.17.0"
+  }
 }

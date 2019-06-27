@@ -6,15 +6,7 @@ const cookieParser = require( "cookie-parser");
 const bodyParser = require( "body-parser");
 const routes = require( "./routes/index");
 const users = require( "./routes/users");
-const admin = require('firebase-admin');
-
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
-  databaseURL: 'https://portdb-6b860.firebaseio.com'
-});
-
-const defaultDatabase = admin.database();
-console.log('default database is: ' + defaultDatabase);
+const api = require( "./routes/api");
 
 let app = express();
 
@@ -32,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -66,6 +59,5 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = {
-  app: app,
-  admin: admin
+  app: app
 };

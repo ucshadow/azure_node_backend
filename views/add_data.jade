@@ -1,4 +1,157 @@
 extends layout
 
 block content
-    h1= "You are welcomed to add data"
+    form(method='POST' action='/api/add')
+        p.r Media
+        .form-group.row
+            label.col-sm-2.col-form-label.col-form-label-sm(for='mTitle') Title
+            .col-sm-10
+                input#mTitle.form-control.form-control-sm(type='text', name='media_title')
+
+        .form-group.row
+            label.col-sm-2.col-form-label.col-form-label-sm(for='mName') Name
+            .col-sm-10
+                input#mName.form-control.form-control-sm(type='text', name='media_name')
+
+        .form-group.row
+                    label.col-sm-2.col-form-label.col-form-label-sm(for='mType') Type
+                    .col-sm-10
+                        input#mType.form-control.form-control-sm(type='text', name='media_text')
+
+        .form-group.row
+            label.col-sm-2.col-form-label.col-form-label-sm(for='mUrl') URL
+            .col-sm-10
+                input#mUrl.form-control.form-control-sm(type='text', name='media_url')
+
+
+        p.r Code samples
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='cDescription') Description
+                .col-sm-10
+                    input#cDescription.form-control.form-control-sm(type='text', name='code_description')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='cText') Text
+                .col-sm-10
+                    input#cText.form-control.form-control-sm(type='text', name='code_text')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='cComment') Comment
+                .col-sm-10
+                    input#cComment.form-control.form-control-sm(type='text', name='code_comment')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='cKnowledge') Knowledge gained
+                .col-sm-10
+                    input#cKnowledge.form-control.form-control-sm(type='text', name='code_knowledge')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='cTitle') Title
+                .col-sm-10
+                    input#cTitle.form-control.form-control-sm(type='text', name='code_title')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='cLanguage') Language
+                .col-sm-10
+                    input#cLanguage.form-control.form-control-sm(type='text', name='code_language')
+
+
+        p.r Languages
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='lTitle') Title
+                .col-sm-10
+                    input#lTitle.form-control.form-control-sm(type='text', name='language_title')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='lName') Name
+                .col-sm-10
+                    input#lName.form-control.form-control-sm(type='text', name='language_name')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='lComment') Comment
+                .col-sm-10
+                    input#lComment.form-control.form-control-sm(type='text', name='language_comment')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='lKnowledge') Knowledge gained
+                .col-sm-10
+                    input#lKnowledge.form-control.form-control-sm(type='text', name='language_knowledge')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='lUrl') Url
+                .col-sm-10
+                    input#lUrl.form-control.form-control-sm(type='text', name='language_url')
+
+
+        p.r Tech used
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='tName') tName
+                .col-sm-10
+                    input#tName.form-control.form-control-sm(type='text', name='tech_name')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='tUrl') Url
+                .col-sm-10
+                    input#tUrl.form-control.form-control-sm(type='text', name='tech_url')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='tComment') Comment
+                .col-sm-10
+                    input#tComment.form-control.form-control-sm(type='text', name='tech_comment')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='tKnowledge') Knowledge gained
+                .col-sm-10
+                    input#tKnowledge.form-control.form-control-sm(type='text', name='tech_knowledge')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='tTitle') Title
+                .col-sm-10
+                    input#tTitle.form-control.form-control-sm(type='text', name='tech_title')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='tType') Type
+                .col-sm-10
+                    input#tType.form-control.form-control-sm(type='text', name='tech_type')
+
+
+
+        p.r The rest
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='rDescription') Description
+                .col-sm-10
+                    input#rDescription.form-control.form-control-sm(type='text', name='description')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='rStory') Story
+                .col-sm-10
+                    input#rStory.form-control.form-control-sm(type='text', name='story')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='rName') Name
+                .col-sm-10
+                    input#rName.form-control.form-control-sm(type='text', name='name')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='rWebLink') Web Link
+                .col-sm-10
+                    input#rWebLink.form-control.form-control-sm(type='text', name='web_link')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='rDate') Date
+                .col-sm-10
+                    input#rDate.form-control.form-control-sm(type='text', name='date')
+
+            .form-group.row
+                label.col-sm-2.col-form-label.col-form-label-sm(for='rGitLink') Git Link
+                .col-sm-10
+                    input#rGitLink.form-control.form-control-sm(type='text', name='git_link')
+
+        .form-group.row
+            label.col-sm-2.col-form-label.col-form-label-sm(for='pwd') Password
+            .col-sm-10
+                input#pwd.form-control.form-control-sm(type='text', name='pwd')
+
+
+        button.btn.btn-primary(type='submit') Submit
+

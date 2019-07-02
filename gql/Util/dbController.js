@@ -42,7 +42,7 @@ class Controller {
     return this.db.collection('techs').get()
   };
 
-  static alreadyPresent = (doc) => {
+  static alreadyPresent(doc) {
     doc.get().then(docRef => {
       if(docRef.exists) {
         return true

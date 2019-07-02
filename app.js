@@ -8,6 +8,7 @@ const routes = require( "./routes/index");
 const users = require( "./routes/users");
 const admin = require( "./routes/admin");
 const api = require( "./routes/api");
+const graphqlRoute = require( "./routes/graphqlRoute");
 
 let app = express();
 
@@ -27,6 +28,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/api', api);
 app.use('/admin', admin);
+app.use('/graphql', graphqlRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

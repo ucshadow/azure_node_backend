@@ -19,7 +19,7 @@ class Project {
     // this.code_samples = [];
   }
 
-  static createProject = (d) => {
+  static createProject(d) {
     let res = new Project();
     res.name = d['name'];
     res.web_link = d['web_link'];
@@ -38,7 +38,7 @@ class Project {
     return res;
   };
 
-  static parseMedia = (d, p) => {
+  static parseMedia(d, p) {
     let numberOFEntries = d['media_title'].split('|').length;
 
     let titles = d['media_title'].split('|');
@@ -56,7 +56,7 @@ class Project {
     }
   };
 
-  static parseKnowledges = (d, p) => {
+  static parseKnowledges(d, p) {
     let numberOFEntries = d['tech_name'].split('|').length;
 
     let titles = d['tech_name'].split('|');
@@ -70,7 +70,7 @@ class Project {
     }
   };
 
-  static parseLanguages = (d, p) => {
+  static parseLanguages(d, p) {
     let numberOFEntries = d['language_title'].split('|').length;
 
     let titles = d['language_title'].split('|');
@@ -90,7 +90,7 @@ class Project {
     }
   };
 
-  static parseTechs = (d, p) => {
+  static parseTechs(d, p) {
 
     let numberOFEntries = d['tech_name'].split('|').length;
 

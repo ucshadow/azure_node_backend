@@ -4,7 +4,7 @@ class Controller {
 
   static db = Provider.getDb();
 
-  static addData = (data, dbName) => {
+  static addData(data, dbName){
     data = JSON.parse(JSON.stringify(data));
     let doc = this.db.collection(dbName).doc(data['id']);
     if(this.alreadyPresent(doc)) {
@@ -19,7 +19,7 @@ class Controller {
   };
 
   // code samples is off for now
-  static addProject = (project) => {
+  static addProject(project){
     // project.techs.forEach(e => {
     //   this.addData(e, 'techs')
     // });
@@ -40,7 +40,7 @@ class Controller {
     this.addData(theRest, 'projects')
   };
 
-  static getTechs = () => {
+  static getTechs(){
     return this.db.collection('techs').get()
   };
 

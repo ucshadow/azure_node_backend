@@ -2,8 +2,6 @@ let Provider = require('./dbProvider');
 
 class Controller {
 
-  static db = Provider.getDb();
-
   static addData(data, dbName){
     data = JSON.parse(JSON.stringify(data));
     let doc = this.db.collection(dbName).doc(data['id']);
@@ -53,5 +51,7 @@ class Controller {
     return false;
   }
 }
+
+Controller.db = Provider.getDb();
 
 module.exports = Controller;

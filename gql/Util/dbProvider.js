@@ -1,6 +1,9 @@
 class dbProvider {
-  static db;
-  static admin;
+
+  constructor() {
+    this.db = undefined;
+    this.admin = undefined;
+  }
 
   static getDb() {
 

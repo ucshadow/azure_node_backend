@@ -1,6 +1,7 @@
 let express = require('express');
 let Project = require('../models/project');
 let Provider = require('../gql/Util/dbProvider');
+let Controller = require('../gql/Util/dbController');
 let router = express.Router();
 
 const conString = process.env.ADD_STRING;
@@ -10,18 +11,7 @@ const conString = process.env.ADD_STRING;
 let db = Provider.getDb();
 
 router.get('/', function (req, res, next) {
-  db.collection('projects').get()
-    .then((snapshot) => {
-      let r = [];
-      snapshot.forEach((doc) => {
-        r.push(doc.data())
-      });
-      res.send(r);
-    })
-    .catch((err) => {
-      console.log('Error getting documents', err);
-      res.send("Firebase did not respond..")
-    });
+  res.send(Controller.getAllProjects());
 });
 
 

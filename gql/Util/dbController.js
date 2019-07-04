@@ -50,6 +50,10 @@ class Controller {
     });
     return false;
   }
+
+  static getAllProjects() {
+    return Provider.projects
+  }
 }
 
 Controller.db = Provider.getDb();

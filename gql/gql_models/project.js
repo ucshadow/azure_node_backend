@@ -16,6 +16,10 @@ class Project {
     this.id = Util.UUID();
   }
 
+  getName() {
+    return this.name;
+  }
+
 }
 
 module.exports = Project;

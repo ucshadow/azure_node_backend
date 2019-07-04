@@ -1,16 +1,22 @@
 const{ buildSchema } = require('graphql');
+const media = require('./schemas/mediaSchema');
+const tech = require('./schemas/techSchema');
+const knowledge = require('./schemas/knowledgeSchema');
+const project = require('./schemas/projectSchema');
+const Util = require('./Util/Util');
 
-// Construct a schema, using GraphQL schema language
-const schema = buildSchema(`
-  type RandomDie {
-    numSides: Int!
-    rollOnce: Int!
-    roll(numRolls: Int!): [Int]
-  }
 
+let source = ` 
   type Query {
-    getDie(numSides: Int): RandomDie
+    _dummy: String   
   }
-`);
+`;
 
+
+let s = Util.concatSchema(
+  source,
+  [media.schema, tech.schema, knowledge.schema, project.schema],
+  [media.type, tech.type, knowledge.type, project.type]
+);
+const schema = buildSchema(s);
 module.exports = schema;

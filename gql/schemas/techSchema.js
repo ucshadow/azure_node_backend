@@ -1,9 +1,9 @@
 const root = require('../resolvers/root');
-let Tech = require('../gql_models/tech');
+let Controller = require('../Util/dbController');
 
 const techSchema = `
   type Query {
-    getTech(name: String, description: String, type: String, url: String, picUrl: String, id: String): Tech    
+    getAllTechs(name: String, description: String, type: String, url: String, picUrl: String, id: String): [Tech]   
   } 
 `;
 
@@ -18,8 +18,8 @@ const type_ = `
   }
 `;
 
-root['getTech'] = function({}) {
-  return new Tech('Minah tech', 'A grill', 'grill type', 'grill url', 'some imgur link for Minah');
+root['getAllTechs'] = function({}) {
+  return Controller.getTechs()
 };
 
 module.exports = {schema: techSchema, type: type_};

@@ -39,7 +39,7 @@ class Controller {
   };
 
   static getTechs(){
-    return this.db.collection('techs').get()
+    return Provider.techs
   };
 
   static alreadyPresent(doc) {

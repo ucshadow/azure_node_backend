@@ -10,7 +10,7 @@ const knowledgeSchema = `
 
 const type_ = `
   type Knowledge {
-    tech: Tech, 
+    tech: String, 
     knowledgeGained: Int
   }
 `;

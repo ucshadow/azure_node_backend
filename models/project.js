@@ -12,7 +12,7 @@ class Project {
     this.date = '';
     this.id_ = '';
     // this.languages = [];
-    this.media = [];
+    this.medias = [];
     this.techs = [];
     this.usefulness = 0;
     this.knowledges = [];
@@ -52,7 +52,7 @@ class Project {
       obj['type'] = types_[i];
       obj['url'] = urls[i];
       obj['title'] = titles[i];
-      p.media.push(obj)
+      p.medias.push(obj)
     }
   };
 

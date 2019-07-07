@@ -42,6 +42,10 @@ class Controller {
     return Provider.techs
   };
 
+  static getTechsAsP(){
+    return Provider.getTechs()
+  };
+
   static alreadyPresent(doc) {
     doc.get().then(docRef => {
       if(docRef.exists) {

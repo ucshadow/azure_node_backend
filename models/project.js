@@ -98,7 +98,7 @@ class Project {
 
     let res = {};
 
-    Controller.getTechs().then(snap => {
+    Controller.getTechsAsP().then(snap => {
       res[snap['name']] = snap['id'];
       for(let i = 0; i < numberOFEntries; i++) {
         p.techs.push(res[tech_names[i]])

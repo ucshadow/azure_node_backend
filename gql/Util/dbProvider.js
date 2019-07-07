@@ -33,6 +33,10 @@ class DbProvider {
       })
   }
 
+  static getTechs() {
+    return DbProvider.db.collection('techs').get()
+  }
+
   static _getAllProjects() {
     DbProvider.db.collection('projects').get()
       .then((snapshot) => {

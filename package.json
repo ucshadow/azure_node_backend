@@ -13,7 +13,7 @@
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "express-graphql": "^0.8.0",
-    "firebase-admin": "^8.2.0",
+    "firebase-admin": "^11.4.1",
     "graphql": "^14.4.1",
     "jade": "*",
     "morgan": "^1.9.1",
